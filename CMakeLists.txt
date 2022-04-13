@@ -38,6 +38,8 @@ endif()
 
 add_subdirectory(src/cpp subprocess)
 
-# TODO testing
-enable_testing()
-add_subdirectory(test)
+if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
+    # TODO testing
+    enable_testing()
+    add_subdirectory(test)
+endif()
